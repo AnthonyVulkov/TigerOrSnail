@@ -1,0 +1,29 @@
+namespace TigerOrSnail
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> names = Console.ReadLine()
+                .Split()
+                .ToList();
+
+            Random random = new Random();
+            string[] animal = {"Snail", "Tiger"};
+
+            for (int i = 0; i < names.Count; i++)
+            {
+                int index = random.Next(animal.Length);
+
+                if (names[i] == "Stoyan")
+                {
+                    Console.WriteLine($"{names[i]} is a Snail");
+                }
+                else
+                {
+                    Console.WriteLine($"{names[i]} is a {animal[index]}");
+                }
+            }
+        }
+    }
+}
